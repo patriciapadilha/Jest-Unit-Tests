@@ -1,7 +1,7 @@
 /*
   Dadas duas strings que representam nomes de produtos,
   retorne um array contendo dois objetos com os detalhes dos respectivos produtos.
-
+/
   Parâmetros:
   - Uma string;
   - Uma string;
@@ -38,5 +38,8 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+
+console.log(productDetails('Alcool gel', 'Máscara'));
+console.log(typeof productDetails('Alcool gel', 'Máscara'));
 
 module.exports = productDetails;
