@@ -7,6 +7,7 @@ const { calculator, arrayGenerator } = require('../src/objPlayground');
     - div;
     - sub.
   Para cada chave atribua como valor a operação correspondente à sua chave:
+  
     - sum: retorna o resultado da soma dos dois números;
     - mult: retorna o resultado da multiplicação dos dois números;
     - div: retorna o resultado da divisão dos dois números;

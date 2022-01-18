@@ -33,8 +33,43 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => {
+  const results = {
+    sum: (number1 + number2),
+    mult: Math.round(number1 * number2),
+    div: Math.floor(number1 / number2),
+    sub: Math.round(number1 - number2),
+  };
+  return results;
+};
 
-const arrayGenerator = (type, object) => {};
+console.log(calculator(5, 2));
+
+const arrayGenerator = (type, object) => {
+  switch (true) {
+    case type === 'keys':
+      return Object.keys(object);
+    case type === 'values':
+      return Object.values(object); 
+    case type === 'entries': 
+      return Object.entries(object);   
+    default: 
+      return 'Dados incorretos';
+  }
+
+  // if (type === 'keys') {
+  //   return Object.keys(object);
+  // } else if (type === 'values') {
+  //   return Object.values(object);
+  // } else if (type === 'entries') {
+  //   return Object.entries(object);
+  // } else {
+  //   return 'Dados incorretos';
+  // }
+};
+
+console.log(arrayGenerator('keys', { sum: 3, mult: 2, div: 0, sub: -1 }));
+console.log(arrayGenerator('values', { sum: 3, mult: 2, div: 0, sub: -1 }));
+console.log(arrayGenerator('entries', { sum: 3, mult: 2, div: 0, sub: -1 }));
 
 module.exports = { calculator, arrayGenerator };
